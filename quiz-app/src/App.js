@@ -1,9 +1,15 @@
 
 import './App.css';
+import Header from './Header';
+import Game from './Game';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className = 'background'>
+      <Header/>
+      <Game/>
+    </div>
+    
   );
 }
 

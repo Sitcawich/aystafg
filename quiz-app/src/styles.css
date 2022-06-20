@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    color: white;
+}
+
+.background{
+    background-color:#080e55;
+}
+.header h2{
+    color: white;
+    
+}
+.header{
+    display:flex;
+    justify-content: flex-start;
+    background: linear-gradient(#f30909, #080e55);
+    padding:1rem;
+    gap: 17rem;
+    align-items:center;
+    
+
+}
+img{
+   
+    height: 6rem;
+}
+
+.gameBackground{
+    background-color: #080e55;
+}

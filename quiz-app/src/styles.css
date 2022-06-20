@@ -1,21 +1,19 @@
 body{
     margin:0;
     color: white;
-}
-
-.background{
     background-color:#080e55;
 }
 .header h2{
     color: white;
+    font-size: 3rem;
     
 }
 .header{
     display:flex;
     justify-content: flex-start;
     background: linear-gradient(#f30909, #080e55);
-    padding:1rem;
-    gap: 17rem;
+    padding-left:3rem;
+    gap: 8rem;
     align-items:center;
     
 
@@ -28,3 +26,20 @@ img{
 .gameBackground{
     background-color: #080e55;
 }
+.panel{
+    height:25rem;
+    background-color: white;
+    margin: 0 20rem;
+    border-radius:1rem;
+    padding-top: 0.01rem;
+    
+}
+.questionContainer{
+    background-color: #f4dbe3;
+    margin: 3rem;
+    border-radius:1rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+

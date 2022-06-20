@@ -1,15 +1,12 @@
 import React from 'react';
 
-export default class Question{
-    state = {
-        index: 0,
-    };
+export default class Question extends React.Component{
     
     render(){
         const questions =['question1', 'question2', 'question3'];
         return(
             <div className = 'questionContainer'>
-                <div className= 'questionText'>{questions[this.state.index]}</div>
+                <h3 className= 'questionText'>{questions[this.props.questionNumber]}</h3>
             </div>
         );
     }

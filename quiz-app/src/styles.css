@@ -11,9 +11,9 @@ body{
     display:flex;
     justify-content: flex-start;
     background: linear-gradient(#f30909, #080e55);
-    padding-left:3rem;
+    padding-left: 3rem;
     gap: 8rem;
-    align-items:center;
+    align-items: center;
 }
 img{
     height: 6rem;
@@ -70,5 +70,6 @@ button:focus{
 }
 .score {
     color: black;
+    text-align: center;
 }
 

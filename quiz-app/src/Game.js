@@ -10,30 +10,31 @@ export default class Game extends React.Component{
             score: 0
         };
     }
+    // unnecessary
 
-    renderQuestion(){
-        return(
-            <Question questionNumber = {this.state.questionNumber}/>
-        );
-    }
-    renderAnswer(){
-        return(
-            <Answer questionNumber = {this.state.questionNumber}/>
-        );
-    }
-    renderScore() {
-        return (
-            <Score questionNumber = {this.state.questionNumber} score={this.state.score} />
-        );
-    }
+    // renderQuestion(){
+    //     return(
+    //         <Question questionNumber = {this.state.questionNumber}/>
+    //     );
+    // }
+    // renderAnswer(){
+    //     return(
+    //         <Answer questionNumber = {this.state.questionNumber}/>
+    //     );
+    // }
+    // renderScore() {
+    //     return (
+    //         <Score questionNumber = {this.state.questionNumber} score={this.state.score} />
+    //     );
+    // }
     render(){
         return(
             <div className = 'panel'>
                 <h3>
-                    {this.renderQuestion()}
+                <Question questionNumber = {this.state.questionNumber} />
                 </h3>
-                <div>{this.renderAnswer()}</div>
-                <div>{this.renderScore()}</div>
+                <div><Answer questionNumber = {this.state.questionNumber} /></div>
+                <div><Score questionNumber = {this.state.questionNumber} score={this.state.score} /></div>
                
             </div>
         );

@@ -6,7 +6,6 @@ body{
 .header h2{
     color: white;
     font-size: 3rem;
-    
 }
 .header{
     display:flex;
@@ -15,11 +14,8 @@ body{
     padding-left:3rem;
     gap: 8rem;
     align-items:center;
-    
-
 }
 img{
-   
     height: 6rem;
 }
 
@@ -33,7 +29,6 @@ img{
     border-radius:1rem;
     padding-top: 0.01rem;
     padding-bottom: 0.5rem;
-    
 }
 .questionContainer{
     background-color:#f30909;
@@ -53,8 +48,6 @@ img{
     flex-direction: column;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
-    
-    
 }
 button{
     background-color: white;

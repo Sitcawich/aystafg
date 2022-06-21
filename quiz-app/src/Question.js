@@ -3,7 +3,8 @@ import React from 'react';
 export default class Question extends React.Component{
     
     render(){
-        const questions =['Are you that guy?', 'question2', 'question3'];
+        const questions = ['Roughly how long does the moon take to orbit the earth?', 
+        'What Does DNA stand for?', 'Which Roman numeral represents 100?'];
         return(
             <div className = 'questionContainer'>
                 <h3 className= 'questionText'>{questions[this.props.questionNumber]}</h3>

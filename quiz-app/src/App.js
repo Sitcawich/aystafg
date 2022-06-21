@@ -7,10 +7,9 @@ import Game from './Game';
 function App() {
   return (
     <div>
-      <Header/>
-      <Game/>
+      <Header />
+      <Game />
     </div>
-    
   );
 }
 

@@ -27,11 +27,12 @@ img{
     background-color: #080e55;
 }
 .panel{
-    height:25rem;
+    height:auto;
     background-color: white;
-    margin: 0 20rem;
+    margin: auto 20rem;
     border-radius:1rem;
     padding-top: 0.01rem;
+    padding-bottom: 0.5rem;
     
 }
 .questionContainer{
@@ -41,5 +42,38 @@ img{
     height: auto;
     display: flex;
     justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 }
+.answerContainer{
+    background-color:#080e55;
+    margin: 3rem;
+    border-radius:1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    
+    
+}
+button{
+    background-color: white;
+    border-radius:1rem;
+    color: black;
+    padding:1rem;
+    text-align: center;
+    font-family:'Times New Roman';
+    margin:0.5rem auto;
+    width: 20rem;
+}
+button:hover{
+    background-color:rgb(219, 226, 231);
+}
+button:active{
+    background-color:rgb(193, 199, 203);
+}
+button:focus{
+    background-color:rgb(219, 226, 231);
+}
+
 

@@ -30,6 +30,7 @@ img{
     border-radius:1rem;
     padding-top: 0.01rem;
     padding-bottom: 0.5rem;
+    margin-bottom:4rem;
 }
 .questionContainer{
     background-color:#f30909;
@@ -79,5 +80,25 @@ img{
     font-weight: bold;
     text-align: center;
     font-size: larger;
+}
+.navButtons{
+    display:flex;
+    justify-content:space-evenly;
+}
+.prevButton{
+    border-radius: 1rem;
+    background-color:rgba(0, 81, 255, 0.2);
+    font-size: large;
+    width:8rem;
+    padding:1rem;
+    color:white
+}
+.nextButton{
+    border-radius: 1rem;
+    background-color:rgba(0, 81, 255, 0.2);
+    font-size: large;
+    width:8rem;
+    padding:1rem;
+    color:white;
 }
 

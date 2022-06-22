@@ -30,11 +30,12 @@ export default class Game extends React.Component{
     render(){
         return(
             <div className = 'panel'>
+                <div><Score questionNumber = {this.state.questionNumber} score={this.state.score} /></div>
                 <h3>
                 <Question questionNumber = {this.state.questionNumber} />
                 </h3>
                 <div><Answer questionNumber = {this.state.questionNumber} /></div>
-                <div><Score questionNumber = {this.state.questionNumber} score={this.state.score} /></div>
+                
                
             </div>
         );

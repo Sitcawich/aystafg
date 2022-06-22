@@ -6,7 +6,7 @@ body{
 .header h2{
     color: white;
     font-size: 3rem;
-    padding-left: 6rem;
+    
 }
 .header{
     display:flex;
@@ -34,11 +34,16 @@ img{
 .questionContainer{
     background-color:#f30909;
     margin: 3rem;
+    padding: 0 2rem;
     border-radius:1rem;
     height: auto;
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    
+}
+.questionText{
+    text-align: center;
 }
 .answerContainer{
     background-color:#080e55;
@@ -50,7 +55,7 @@ img{
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 }
-button{
+.answerText{
     background-color: white;
     border-radius:1rem;
     color: black;
@@ -59,18 +64,20 @@ button{
     font-family:'Times New Roman';
     margin:0.5rem auto;
     width: 20rem;
+    font-weight: bold;
+    font-size:medium;
 }
-button:hover{
+
+.answerText:hover{
     background-color:rgb(219, 226, 231);
 }
-button:active{
-    background-color:rgb(193, 199, 203);
-}
-button:focus{
+.answerText:focus{
     background-color:rgb(219, 226, 231);
 }
 .score {
     color: black;
+    font-weight: bold;
     text-align: center;
+    font-size: larger;
 }
 

@@ -87,7 +87,7 @@ img{
 }
 .prevButton{
     border-radius: 1rem;
-    background-color:rgba(0, 81, 255, 0.2);
+    background-color:rgba(30, 0, 255, 0.2);
     font-size: large;
     width:8rem;
     padding:1rem;
@@ -95,7 +95,7 @@ img{
 }
 .nextButton{
     border-radius: 1rem;
-    background-color:rgba(0, 81, 255, 0.2);
+    background-color:rgba(30, 0, 255, 0.2);
     font-size: large;
     width:8rem;
     padding:1rem;

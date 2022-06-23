@@ -1,14 +1,31 @@
 import React from 'react';
+import AnswerButton from './AnswerButton';
 
 export default class Answer extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            answerList: [['1 year', '1 day', '1 month'], 
+        ['deoxyribonucleic acid', 'dinitronic acid', 'deuterionucleic acid'], ['L', 'C', 'X']],
+        answerNumber: -1
+        };
+
+    }
+
+    
+
     render(){
-        const answerList = [['1 year', '1 day', '1 month'], 
-        ['deoxyribonucleic acid', 'dinitronic acid', 'deuterionucleic acid'], ['L', 'C', 'X']];
-        const correct = [1, 0, 1];
-        const answers = answerList[this.props.questionNumber].map((answer) => 
-            <button className = 'answerText'>
-                {answer}
-            </button>
+        const answers = this.state.answerList[this.props.questionNumber].map((answer, index) => 
+            {
+                return (
+                <AnswerButton 
+                className={this.state.buttonClass}
+                answerNumber={index}
+                answer = {answer}
+                questionNumber = {this.props.questionNumber}
+                />
+                ) 
+            }
         );
 
         return(

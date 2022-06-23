@@ -56,7 +56,7 @@ img{
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 }
-.answerText{
+.answerTextDefault{
     background-color: white;
     border-radius:1rem;
     color: black;
@@ -69,11 +69,33 @@ img{
     font-size:medium;
 }
 
-.answerText:hover{
+.answerTextDefault:hover{
     background-color:rgb(219, 226, 231);
 }
-.answerText:focus{
-    background-color:rgb(219, 226, 231);
+
+.answerTextGreen{
+    background-color: rgb(13, 225, 59);
+    border-radius:1rem;
+    color: black;
+    padding:1rem;
+    text-align: center;
+    font-family:'Times New Roman';
+    margin:0.5rem auto;
+    width: 20rem;
+    font-weight: bold;
+    font-size:medium;
+}
+.answerTextRed{
+    background-color: rgb(198, 30, 30);
+    border-radius:1rem;
+    color: black;
+    padding:1rem;
+    text-align: center;
+    font-family:'Times New Roman';
+    margin:0.5rem auto;
+    width: 20rem;
+    font-weight: bold;
+    font-size:medium;
 }
 .score {
     color: black;

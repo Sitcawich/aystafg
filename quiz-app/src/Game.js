@@ -12,23 +12,7 @@ export default class Game extends React.Component{
             score: 0
         };
     }
-    // unnecessary
-
-    // renderQuestion(){
-    //     return(
-    //         <Question questionNumber = {this.state.questionNumber}/>
-    //     );
-    // }
-    // renderAnswer(){
-    //     return(
-    //         <Answer questionNumber = {this.state.questionNumber}/>
-    //     );
-    // }
-    // renderScore() {
-    //     return (
-    //         <Score questionNumber = {this.state.questionNumber} score={this.state.score} />
-    //     );
-    // }
+    
     render(){
         return(
             <div className = 'panel'>

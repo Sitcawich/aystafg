@@ -1,5 +1,7 @@
 import React from 'react';
 
+var i = 0;
+
 export default class AnswerButton extends React.Component{
 
     constructor(props){
@@ -12,12 +14,16 @@ export default class AnswerButton extends React.Component{
     }
 
     handleClick(){
-        if(this.props.answerNumber === this.state.correctList[this.props.questionNumber]){
-           this.setState({buttonClass: 'answerTextGreen'})
+        if(i===0){
+            if(this.props.answerNumber === this.state.correctList[this.props.questionNumber]){
+                this.setState({buttonClass: 'answerTextGreen'})
+             }
+             else{
+                 this.setState({buttonClass: 'answerTextRed'})
+             }
         }
-        else{
-            this.setState({buttonClass: 'answerTextRed'})
-        }
+        i++;
+        
     }
 
     render(){

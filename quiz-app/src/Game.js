@@ -17,22 +17,22 @@ export default class Game extends React.Component{
     render(){
         return(
             <div className = 'panel'>
-                <div><Score 
+                <Score 
                 scoreDenominator = {this.state.scoreDenominator} 
-                score={this.state.score} /></div>
+                score={this.state.score} />
                 <h3>
-                <Question questionNumber = {this.state.questionNumber} />
+                    <Question questionNumber = {this.state.questionNumber} />
                 </h3>
-                <div><Answer 
+                <Answer 
                 questionNumber = {this.state.questionNumber}
                 setState = {p => {this.setState(p)}}
                 score = {this.state.score}
-                scoreDenominator = {this.state.scoreDenominator}/></div>
+                scoreDenominator = {this.state.scoreDenominator}/>
+                
                 <div className = 'navButtons'>
                     <Previous/>
                     <Next/>
                 </div>
-               
             </div>
         );
     }

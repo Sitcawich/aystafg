@@ -12,8 +12,6 @@ export default class Answer extends React.Component{
 
     }
 
-    
-
     render(){
         const answers = this.state.answerList[this.props.questionNumber].map((answer, index) => 
             {

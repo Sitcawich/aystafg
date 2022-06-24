@@ -13,7 +13,7 @@ export default class Game extends React.Component{
             scoreDenominator: 0
         };
     }
-    
+
     render(){
         return(
             <div className = 'panel'>

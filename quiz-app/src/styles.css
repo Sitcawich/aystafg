@@ -76,7 +76,7 @@ img{
 .answerTextGreen{
     background-color: rgb(13, 225, 59);
     border-radius:1rem;
-    color: black;
+    color: white;
     padding:1rem;
     text-align: center;
     font-family:'Times New Roman';
@@ -88,7 +88,7 @@ img{
 .answerTextRed{
     background-color: rgb(198, 30, 30);
     border-radius:1rem;
-    color: black;
+    color: white;
     padding:1rem;
     text-align: center;
     font-family:'Times New Roman';

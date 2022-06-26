@@ -6,7 +6,7 @@ export default class Header extends React.Component{
         return(
             <div className = 'header'>
                 <img src = {logo} alt = 'logo'/>
-                <h2>Are You Smarter Than A 5th Grader?</h2>
+                <h2>Are You Smarter Than A 5<sup>th</sup> Grader?</h2>
             </div>
         );
     }

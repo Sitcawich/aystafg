@@ -7,8 +7,14 @@ export default class Answer extends React.Component{
         this.state = {
             answerList: [['1 year', '1 day', '1 month'], 
         ['deoxyribonucleic acid', 'dinitronic acid', 'deuterionucleic acid'], ['L', 'C', 'X']],
-            answerNumber: -1
+            answerNumber: -1,
+            hasAnswered: false
         };
+        this.changeAnswered = this.changeAnswered.bind(this);
+    }
+
+    changeAnswered() {
+        this.setState({ hasAnswered: true});
     }
 
     render(){
@@ -23,6 +29,8 @@ export default class Answer extends React.Component{
                     setGameState = {p => {this.props.setState(p)}}
                     score = {this.props.score}
                     scoreDenominator = {this.props.scoreDenominator}
+                    onClick = {this.changeAnswered}
+                    hasAnswered = {this.state.hasAnswered}
                     />
                 ) 
             }

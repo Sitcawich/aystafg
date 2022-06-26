@@ -1,7 +1,5 @@
 import React from 'react';
 
-var i = 0;
-
 export default class AnswerButton extends React.Component{
 
     constructor(props){
@@ -15,7 +13,7 @@ export default class AnswerButton extends React.Component{
     }
 
     handleClick(){
-        if (i===0){
+        if (!this.props.hasAnswered){
             if (this.props.answerNumber === this.state.correctList[this.props.questionNumber]){
                 this.setState({buttonClass: 'answerTextGreen'});
                 this.props.setGameState({score: this.props.score + 1});
@@ -23,8 +21,8 @@ export default class AnswerButton extends React.Component{
                 this.setState({buttonClass: 'answerTextRed'});
             }
             this.props.setGameState({scoreDenominator: this.props.scoreDenominator + 1});
+            this.props.onClick();
         }
-        ++i;
     }
 
     render(){

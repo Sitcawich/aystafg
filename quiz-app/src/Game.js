@@ -10,7 +10,8 @@ export default class Game extends React.Component{
         this.state = {
             questionNumber: 0,
             score: 0,
-            scoreDenominator: 0
+            scoreDenominator: 0,
+            length: 3
         };
         this.changeQuestion = this.changeQuestion.bind(this);
     }

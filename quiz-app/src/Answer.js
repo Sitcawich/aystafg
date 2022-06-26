@@ -21,7 +21,7 @@ export default class Answer extends React.Component{
                     questionNumber = {this.props.questionNumber}
                     setGameState = {p => {this.props.setState(p)}}
                     score = {this.props.score}
-                    scoreDenominator = {this.props.scoreDenominator}
+                    questionsAnswered = {this.props.questionsAnswered}
                     hasAnswered = {this.props.hasAnswered}
                     />
                 ) 

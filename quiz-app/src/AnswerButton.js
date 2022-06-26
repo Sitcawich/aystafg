@@ -14,13 +14,13 @@ export default class AnswerButton extends React.Component{
     handleClick(){
         if (!this.props.hasAnswered) {
             if (this.props.answerNumber === this.state.correctList[this.props.questionNumber]) {
-                this.setState({buttonClass: 'answerTextGreen'});
-                this.props.setGameState({score: this.props.score + 1});
+                this.setState({ buttonClass: 'answerTextGreen' });
+                this.props.setGameState({ score: this.props.score + 1 });
             } else {
                 this.setState({buttonClass: 'answerTextRed'});
             }
             this.props.setGameState({ 
-                scoreDenominator: this.props.scoreDenominator + 1,
+                questionsAnswered: this.props.questionsAnswered + 1,
                 hasAnswered: true 
             });
         }

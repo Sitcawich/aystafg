@@ -10,7 +10,7 @@ export default class Game extends React.Component{
         this.state = {
             questionNumber: 0,
             score: 0,
-            scoreDenominator: 0,
+            questionsAnswered: 0,
             length: 3,
             hasAnswered: false
         };
@@ -22,25 +22,28 @@ export default class Game extends React.Component{
         if (newQ >= 0 && newQ < this.state.length) {
             this.setState({ questionNumber: newQ });
         }
+        if (newQ >= this.state.questionsAnswered) {
+            this.setState({ hasAnswered: false });
+        }
     }
 
     render() {
         return(
             <div className = 'panel'>
-                <Score scoreDenominator = {this.state.scoreDenominator} 
+                <Score questionsAnswered = {this.state.questionsAnswered} 
                 score={this.state.score} />
                 <h3>
                     <Question questionNumber = {this.state.questionNumber} />
                 </h3>
                 <Answer questionNumber = {this.state.questionNumber}
-                setState = {p => {this.setState(p)}}
+                setState = {p => {this.setState(p)}} // bad style?
                 score = {this.state.score}
-                scoreDenominator = {this.state.scoreDenominator}
+                questionsAnswered = {this.state.questionsAnswered}
                 hasAnswered={this.state.hasAnswered} />
                 
                 <div className = 'navButtons'>
                     <Previous onClick={this.changeQuestion} />
-                    <Next onClick={this.changeQuestion} />
+                    <Next onClick={this.changeQuestion} hasAnswered={this.state.hasAnswered} />
                 </div>
             </div>
         );

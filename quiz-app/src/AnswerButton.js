@@ -19,8 +19,10 @@ export default class AnswerButton extends React.Component{
             } else {
                 this.setState({buttonClass: 'answerTextRed'});
             }
-            this.props.setGameState({ scoreDenominator: this.props.scoreDenominator + 1 });
-            this.props.onClick();
+            this.props.setGameState({ 
+                scoreDenominator: this.props.scoreDenominator + 1,
+                hasAnswered: true 
+            });
         }
     }
 

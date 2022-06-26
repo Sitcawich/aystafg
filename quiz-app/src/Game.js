@@ -11,16 +11,17 @@ export default class Game extends React.Component{
             questionNumber: 0,
             score: 0,
             scoreDenominator: 0,
-            length: 3
+            length: 3,
+            hasAnswered: false
         };
         this.changeQuestion = this.changeQuestion.bind(this);
     }
 
     changeQuestion(increment) {
-        // let newQ = this.state.questionNumber + increment;
-        this.setState((state) => ({
-            questionNumber: state.questionNumber + increment
-        }));
+        const newQ = this.state.questionNumber + increment;
+        if (newQ >= 0 && newQ < this.state.length) {
+            this.setState({ questionNumber: newQ });
+        }
     }
 
     render() {
@@ -34,7 +35,8 @@ export default class Game extends React.Component{
                 <Answer questionNumber = {this.state.questionNumber}
                 setState = {p => {this.setState(p)}}
                 score = {this.state.score}
-                scoreDenominator = {this.state.scoreDenominator} />
+                scoreDenominator = {this.state.scoreDenominator}
+                hasAnswered={this.state.hasAnswered} />
                 
                 <div className = 'navButtons'>
                     <Previous onClick={this.changeQuestion} />

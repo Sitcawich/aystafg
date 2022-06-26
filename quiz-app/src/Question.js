@@ -7,7 +7,9 @@ export default class Question extends React.Component{
         'What Does DNA stand for?', 'Which Roman numeral represents 100?'];
         return(
             <div className = 'questionContainer'>
-                <h3 className= 'questionText'>{questions[this.props.questionNumber]}</h3>
+                <h3 className= 'questionText'>
+                    {this.props.questionNumber + 1}. {questions[this.props.questionNumber]}
+                </h3>
             </div>
         );
     }

@@ -1,28 +1,25 @@
 import React from 'react';
 
-export default class AnswerButton extends React.Component{
+export default class AnswerButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             buttonClass: 'answerTextDefault',
             correctList: [2, 0, 1],
-            isClicked: false
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(){
+    handleClick() {
         if (!this.props.hasAnswered) {
-            if (this.props.answerNumber === this.state.correctList[this.props.questionNumber]) {
+            if (this.props.answerNum === this.state.correctList[this.props.questionNum]) {
                 this.setState({ buttonClass: 'answerTextGreen' });
-                this.props.setGameState({ score: this.props.score + 1 });
+                this.props.incrementScore();
             } else {
                 this.setState({buttonClass: 'answerTextRed'});
             }
-            this.props.setGameState({ 
-                questionsAnswered: this.props.questionsAnswered + 1,
-                hasAnswered: true 
-            });
+            this.props.changeAnswered();
+            this.props.incrementNumAnswered();
         }
     }
 

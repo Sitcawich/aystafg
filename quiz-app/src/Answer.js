@@ -11,22 +11,19 @@ export default class Answer extends React.Component{
     }
 
     render(){
-        const answers = this.state.answerList[this.props.questionNumber].map((answer, index) => 
-            {
-                return (
-                    <AnswerButton 
-                    className={this.state.buttonClass}
-                    answerNumber={index}
-                    answer = {answer}
-                    questionNumber = {this.props.questionNumber}
-                    setGameState = {p => {this.props.setState(p)}}
-                    score = {this.props.score}
-                    questionsAnswered = {this.props.questionsAnswered}
-                    hasAnswered = {this.props.hasAnswered}
-                    />
-                ) 
-            }
-        );
+        const answers = this.state.answerList[this.props.questionNum].map((answer, index) => {
+            return (
+                <AnswerButton 
+                className={this.state.buttonClass}
+                answerNum={index}
+                answer = {answer}
+                questionNum = {this.props.questionNum}
+                hasAnswered = {this.props.hasAnswered}
+                incrementScore = {this.props.incrementScore}
+                changeAnswered = {this.props.changeAnswered}
+                incrementNumAnswered = {this.props.incrementNumAnswered} />
+            ) 
+        });
 
         return(
             <div className = 'answerContainer'>

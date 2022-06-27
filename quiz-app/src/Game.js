@@ -8,42 +8,57 @@ export default class Game extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            questionNumber: 0,
+            questionNum: 0,
             score: 0,
-            questionsAnswered: 0,
+            numAnswered: 0,
             length: 3,
             hasAnswered: false
         };
-        this.changeQuestion = this.changeQuestion.bind(this);
+        this.changeQNum = this.changeQNum.bind(this);
+        this.incrementScore = this.incrementScore.bind(this);
+        this.changeAnswered = this.changeAnswered.bind(this);
+        this.incrementNumAnswered = this.incrementNumAnswered.bind(this);
     }
 
-    changeQuestion(increment) {
-        const newQ = this.state.questionNumber + increment;
+    changeQNum(increment) {
+        const newQ = this.state.questionNum + increment;
         if (newQ >= 0 && newQ < this.state.length) {
-            this.setState({ questionNumber: newQ });
+            this.setState({ questionNum: newQ });
         }
-        if (newQ >= this.state.questionsAnswered) {
+        if (newQ >= this.state.numAnswered) {
             this.setState({ hasAnswered: false });
         }
+    }
+
+    incrementScore() {
+        this.setState({ score: this.state.score + 1 });
+    }
+
+    changeAnswered() {
+        this.setState({ hasAnswered: true });
+    }
+
+    incrementNumAnswered() {
+        this.setState({ numAnswered: this.state.numAnswered + 1 });
     }
 
     render() {
         return(
             <div className = 'panel'>
-                <Score questionsAnswered = {this.state.questionsAnswered} 
+                <Score numAnswered = {this.state.numAnswered} 
                 score={this.state.score} />
                 <h3>
-                    <Question questionNumber = {this.state.questionNumber} />
+                    <Question questionNumber = {this.state.questionNum} />
                 </h3>
-                <Answer questionNumber = {this.state.questionNumber}
-                setState = {p => {this.setState(p)}} // bad style?
-                score = {this.state.score}
-                questionsAnswered = {this.state.questionsAnswered}
-                hasAnswered={this.state.hasAnswered} />
+                <Answer questionNum = {this.state.questionNum}
+                hasAnswered={this.state.hasAnswered}
+                incrementScore={this.incrementScore}
+                changeAnswered={this.changeAnswered}
+                incrementNumAnswered={this.incrementNumAnswered} />
                 
                 <div className = 'navButtons'>
-                    <Previous onClick={this.changeQuestion} />
-                    <Next onClick={this.changeQuestion} hasAnswered={this.state.hasAnswered} />
+                    <Previous onClick={this.changeQNum} />
+                    <Next onClick={this.changeQNum} hasAnswered={this.state.hasAnswered} />
                 </div>
             </div>
         );

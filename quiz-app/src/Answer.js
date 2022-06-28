@@ -18,9 +18,8 @@ export default class Answer extends React.Component{
                 answerNum={index}
                 answer = {answer}
                 questionNum = {this.props.questionNum}
-                hasAnswered = {this.props.hasAnswered}
                 incrementScore = {this.props.incrementScore}
-                changeAnswered = {this.props.changeAnswered}
+                numAnswered={this.props.numAnswered}
                 incrementNumAnswered = {this.props.incrementNumAnswered} />
             ) 
         });

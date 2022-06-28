@@ -7,7 +7,7 @@ export default class Next extends React.Component{
     }
     
     handleClick() {
-        if (this.props.hasAnswered) {
+        if (this.props.numAnswered > this.props.questionNum) {
             this.props.onClick(1);
         }
     }

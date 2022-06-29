@@ -13,6 +13,7 @@ export default class AnswerButton extends React.Component {
     handleClick() {
         if (this.props.numAnswered === this.props.questionNum) {
             if (this.props.answerNum === this.state.correctList[this.props.questionNum]) {
+                // Make copy of state array, modify it, then setState w/ it
                 let buttonClass = [...this.state.buttonClass];
                 buttonClass[this.props.questionNum] = 'answerTextGreen';
                 this.setState({ buttonClass: buttonClass });

@@ -12,7 +12,7 @@ export default class Previous extends React.Component{
 
     render(){
         return(
-            <button className = 'prevButton' onClick={this.handleClick}>
+            <button className = 'navButton' onClick={this.handleClick}>
                 &laquo; Previous
             </button>
         );

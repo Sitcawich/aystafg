@@ -14,7 +14,7 @@ export default class Next extends React.Component{
     
     render(){
         return(
-            <button className = 'nextButton' onClick={this.handleClick}>
+            <button className = 'navButton' onClick={this.handleClick}>
                 Next &raquo;
             </button>
         );

@@ -2,6 +2,7 @@ body{
     margin:0;
     color: white;
     background-color:#080e55;
+    font-family: 'Times New Roman', Times, serif;
 }
 .header h2{
     color: white;
@@ -19,7 +20,6 @@ body{
 img{
     height: 6rem;
 }
-
 .gameBackground{
     background-color: #080e55;
 }
@@ -34,7 +34,7 @@ img{
 }
 .questionContainer{
     background-color:#f30909;
-    margin: 2rem;
+    margin: 1rem 2rem;
     padding: 0 2rem;
     border-radius:1rem;
     height: auto;
@@ -96,29 +96,33 @@ img{
     font-weight: bold;
     font-size:medium;
 }
-.scoreText {
-    color: black;
-    background-color: aqua;
-    width: 20rem;
+.score {
+    background-color: blue;
+    width: 10rem;
+    height: 4rem;
     border-radius: 1rem;
-    margin: 1rem auto;
     font-weight: bold;
     text-align: center;
     font-size: larger;
+    border-style: solid;
+    border-color: black;
+    border-width: 1.8px;
 }
-.navButtons{
+.nav{
     display: flex;
     justify-content: space-evenly;
+    margin: 1rem;
 }
-.prevButton, .nextButton{
+.navButton{
     border-radius: 1rem;
     background-color: blue;
     font-size: large;
     width: 8rem;
+    height: 4rem;
     padding: 1rem;
     color: white
 }
-.nextButton:hover, .prevButton:hover{
+.navButton:hover{
     background-color: #080e55;
 }
 

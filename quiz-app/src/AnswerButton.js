@@ -4,8 +4,19 @@ export default class AnswerButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            buttonClass: ['answerTextDefault', 'answerTextDefault', 'answerTextDefault'],
-            correctList: [2, 0, 1]
+            buttonClass: [
+                'answerTextDefault', 
+                'answerTextDefault', 
+                'answerTextDefault',
+                'answerTextDefault',
+                'answerTextDefault',
+                'answerTextDefault', 
+                'answerTextDefault', 
+                'answerTextDefault',
+                'answerTextDefault',
+                'answerTextDefault'
+            ],
+            correctList: [2, 0, 1, 0, 3, 2, 2, 1, 1, 3]
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -30,7 +41,7 @@ export default class AnswerButton extends React.Component {
     render(){
         return(
             <button className = {this.state.buttonClass[this.props.questionNum]} 
-            onClick = {this.handleClick}>
+        onClick = {this.handleClick}>
                 {this.props.answer}
             </button>
         );

@@ -12,7 +12,7 @@ export default class Game extends React.Component{
             questionNum: 0,
             score: 0,
             numAnswered: 0,
-            length: 3,
+            length: 10,
         };
         this.changeQNum = this.changeQNum.bind(this);
         this.incrementScore = this.incrementScore.bind(this);
@@ -37,9 +37,7 @@ export default class Game extends React.Component{
     render() {
         return(
             <div className = 'panel'>
-                <h3>
-                    <Question questionNumber = {this.state.questionNum} />
-                </h3>
+                <h3><Question questionNumber = {this.state.questionNum} /></h3>
                 <Answer questionNum = {this.state.questionNum}
             incrementScore={this.incrementScore}
             incrementNumAnswered={this.incrementNumAnswered}

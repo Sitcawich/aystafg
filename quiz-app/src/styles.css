@@ -1,8 +1,10 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
 body{
     margin:0;
     color: white;
     background-color:#080e55;
-    font-family: 'Times New Roman', Times, serif;
 }
 .header h2{
     color: white;
@@ -61,7 +63,6 @@ img{
     color: black;
     padding:1rem;
     text-align: center;
-    font-family:'Times New Roman';
     margin:0.5rem auto;
     width: 20rem;
     font-weight: bold;
@@ -78,7 +79,6 @@ img{
     color: white;
     padding:1rem;
     text-align: center;
-    font-family:'Times New Roman';
     margin:0.5rem auto;
     width: 20rem;
     font-weight: bold;
@@ -90,7 +90,6 @@ img{
     color: white;
     padding:1rem;
     text-align: center;
-    font-family:'Times New Roman';
     margin:0.5rem auto;
     width: 20rem;
     font-weight: bold;
@@ -99,14 +98,15 @@ img{
 .score {
     background-color: blue;
     width: 10rem;
-    height: 4rem;
+    height: 2.6rem;
+    margin: 0;
     border-radius: 1rem;
-    font-weight: bold;
     text-align: center;
     font-size: larger;
     border-style: solid;
     border-color: black;
     border-width: 1.8px;
+    padding-top: 1.2rem;
 }
 .nav{
     display: flex;
@@ -116,7 +116,7 @@ img{
 .navButton{
     border-radius: 1rem;
     background-color: blue;
-    font-size: large;
+    font-size: larger;
     width: 8rem;
     height: 4rem;
     padding: 1rem;

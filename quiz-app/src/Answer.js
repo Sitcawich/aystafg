@@ -12,7 +12,7 @@ export default class Answer extends React.Component{
                 ['Hydrogen', 'Nitrogen', 'Carbon', 'Helium'],
                 ['Recombination', 'Deposition', 'Ionization', 'Sublimation'],
                 ['Frederick Douglas', 'Jimmy Hendrix', 'Francis Scott Key', 'F. Scott Fitzgerald'],
-                ['Constitution', 'Declaration of Independence', 'Articles of Confederation', 'Bill of Rights'],
+                ['Constitution', 'Declaration of Independence', 'Articles of Confederation', 'Constitutional Amendment'],
                 ['6', '8', '9', '10'],
                 ['1', '2', '0', '3'],
                 ['Heat Capacity', 'Force', 'Capacitance', 'Energy']

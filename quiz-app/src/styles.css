@@ -9,13 +9,14 @@ body{
 .header h2{
     color: white;
     font-size: 3rem;
-    padding-left: 6rem;
+    padding-left: 3rem;
 }
 .header{
     display:flex;
     justify-content: flex-start;
     background: linear-gradient(#f30909, #080e55);
-    padding-left: 3rem;
+    padding-left: 6rem;
+    height: 8rem;
     gap: 8rem;
     align-items: center;
 }
@@ -125,4 +126,9 @@ img{
 .navButton:hover{
     background-color: #080e55;
 }
-
+.footer {
+    color: white;
+    padding-left: 44rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+}

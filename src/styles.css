@@ -6,22 +6,22 @@ body{
     color: white;
     background-color:#080e55;
 }
-.header h2{
+.header-text{
     color: white;
     font-size: 3rem;
-    padding-left: 3rem;
 }
 .header{
+    position:relative;
+    justify-content: center;
     display:flex;
-    justify-content: flex-start;
     background: linear-gradient(#f30909, #080e55);
-    padding-left: 6rem;
     height: 8rem;
-    gap: 8rem;
     align-items: center;
 }
-img{
+.header img{
+    position: absolute;
     height: 6rem;
+    left:3rem;
 }
 .gameBackground{
     background-color: #080e55;

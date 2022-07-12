@@ -1,6 +1,9 @@
 {
   "name": "quiz-app",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "homepage": "https://akatsuki-slayer.github.io/aystafg",
   "private": true,
   "dependencies": {

@@ -9,6 +9,7 @@ body{
 .header-text{
     color: white;
     font-size: 3rem;
+    flex-shrink: 3;
 }
 .header{
     position:relative;

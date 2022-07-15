@@ -6,7 +6,7 @@ import Previous from './Previous';
 import Next from './Next';
 import RightButton from './RightButton';
 
-export default class Game extends React.Component{
+export default class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,21 +36,21 @@ export default class Game extends React.Component{
     }
 
     render() {
-        return(
-            <div className = 'panel'>
-                <h3><Question questionNumber = {this.state.questionNum} /></h3>
-                <Answer questionNum = {this.state.questionNum}
-            incrementScore={this.incrementScore}
-            incrementNumAnswered={this.incrementNumAnswered}
-            numAnswered={this.state.numAnswered} />
-                <div className = 'nav'>
+        return (
+            <div className='panel'>
+                <h3><Question questionNumber={this.state.questionNum} /></h3>
+                <Answer questionNum={this.state.questionNum}
+                    incrementScore={this.incrementScore}
+                    incrementNumAnswered={this.incrementNumAnswered}
+                    numAnswered={this.state.numAnswered} />
+                <div className='nav'>
                     <Previous onClick={this.changeQNum} />
-                    <Score numAnswered = {this.state.numAnswered} 
-                score={this.state.score} />
-                    <RightButton onClick={this.changeQNum} 
-                numAnswered={this.state.numAnswered}
-                questionNum={this.state.questionNum}
-                length = {this.state.length} />
+                    <Score numAnswered={this.state.numAnswered}
+                        score={this.state.score} />
+                    <RightButton onClick={this.changeQNum}
+                        numAnswered={this.state.numAnswered}
+                        questionNum={this.state.questionNum}
+                        length={this.state.length} />
                 </div>
             </div>
         );

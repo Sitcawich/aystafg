@@ -32,7 +32,6 @@ export default class AnswerButton extends React.Component {
             } else {
                 let buttonClass = [...this.state.buttonClass];
                 buttonClass[this.props.questionNum] = 'answerTextRed';
-                buttonClass[this.state.correctList[this.props.questionNum]] = 'answerTextGreen';
                 this.setState({ buttonClass: buttonClass });
             }
             this.props.incrementNumAnswered();

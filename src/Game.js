@@ -4,6 +4,7 @@ import Answer from './Answer';
 import Score from './Score';
 import Previous from './Previous';
 import Next from './Next';
+import RightButton from './RightButton';
 
 export default class Game extends React.Component{
     constructor(props) {
@@ -46,9 +47,10 @@ export default class Game extends React.Component{
                     <Previous onClick={this.changeQNum} />
                     <Score numAnswered = {this.state.numAnswered} 
                 score={this.state.score} />
-                    <Next onClick={this.changeQNum} 
+                    <RightButton onClick={this.changeQNum} 
                 numAnswered={this.state.numAnswered}
-                questionNum={this.state.questionNum} />
+                questionNum={this.state.questionNum}
+                length = {this.state.length} />
                 </div>
             </div>
         );

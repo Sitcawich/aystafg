@@ -4,13 +4,13 @@ import Game from './Game';
 import Footer from './Footer';
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <Game />
-      <Footer />
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+			<Game />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

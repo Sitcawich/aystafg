@@ -1,13 +1,13 @@
 import React from 'react';
 import AnswerButton from './AnswerButton';
 
-export default class Answer extends React.Component{
-    constructor(props){
+export default class Answer extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             answerList: [
-                ['1 year', '1 day', '1 month', '1 lightyear'], 
-                ['Deoxyribonucleic acid', 'Dinitronic acid', 'Deuterionucleic acid', 'Diuretic nuclear acid'], 
+                ['1 year', '1 day', '1 month', '1 lightyear'],
+                ['Deoxyribonucleic acid', 'Dinitronic acid', 'Deuterionucleic acid', 'Diuretic nuclear acid'],
                 ['L', 'C', 'X', 'V'],
                 ['Hydrogen', 'Nitrogen', 'Carbon', 'Helium'],
                 ['Recombination', 'Deposition', 'Ionization', 'Sublimation'],
@@ -20,21 +20,21 @@ export default class Answer extends React.Component{
         };
     }
 
-    render(){
+    render() {
         const answers = this.state.answerList[this.props.questionNum].map((answer, index) => {
             return (
                 <AnswerButton className={this.state.buttonClass}
-            answerNum={index}
-            answer = {answer}
-            questionNum = {this.props.questionNum}
-            incrementScore = {this.props.incrementScore}
-            numAnswered={this.props.numAnswered}
-            incrementNumAnswered = {this.props.incrementNumAnswered} />
-            ) 
+                    answerNum={index}
+                    answer={answer}
+                    questionNum={this.props.questionNum}
+                    incrementScore={this.props.incrementScore}
+                    numAnswered={this.props.numAnswered}
+                    incrementNumAnswered={this.props.incrementNumAnswered} />
+            )
         });
 
-        return(
-            <div className = 'answerContainer'>
+        return (
+            <div className='answerContainer'>
                 {answers}
             </div>
         );

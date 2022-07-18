@@ -169,8 +169,12 @@ body{
     font-size: larger;
     width: 30%;
     height: 4rem;
-    padding: 0.5rem;
-    color: white
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0px;
+    text-decoration: none;
 }
 @media (max-width:725px){
     .navButton{

@@ -6,9 +6,9 @@ export default class Submit extends React.Component{
     
     render(){
         return(
-            <button className = 'navButton' to = '/results'>
+            <Link className = 'navButton' to = '/results'>
                 Submit
-            </button>
+            </Link>
         );
     }
 }

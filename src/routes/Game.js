@@ -1,10 +1,10 @@
 import React from 'react';
-import Question from './Question';
-import Answer from './Answer';
-import Score from './Score';
-import Previous from './Previous';
-import Next from './Next';
-import RightButton from './RightButton';
+import Question from '../Question';
+import Answer from '../Answer';
+import Score from '../Score';
+import Previous from '../Previous';
+import Next from '../Next';
+import RightButton from '../RightButton';
 
 export default class Game extends React.Component {
     constructor(props) {

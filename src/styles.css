@@ -219,3 +219,25 @@ body {
 .footer a {
     color: white;
 }
+.results-container {
+    height: auto;
+    background-color: white;
+    margin: auto 20%;
+    border-radius: 1rem;
+    padding-top: 0.01rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@media (max-width:650px) {
+    .results-container {
+        margin: auto 10%;
+        margin-bottom: 2rem;
+    }
+}
+.results-text{
+    color:black;
+    line-height: 2rem;
+
+}

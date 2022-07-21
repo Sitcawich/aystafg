@@ -3,7 +3,6 @@ import Question from '../Question';
 import Answer from '../Answer';
 import Score from '../Score';
 import Previous from '../Previous';
-import Next from '../Next';
 import RightButton from '../RightButton';
 
 export default class Game extends React.Component {
@@ -19,6 +18,7 @@ export default class Game extends React.Component {
         this.incrementScore = this.incrementScore.bind(this);
         this.incrementNumAnswered = this.incrementNumAnswered.bind(this);
     }
+    
 
     changeQNum(increment) {
         const newQ = this.state.questionNum + increment;
@@ -29,10 +29,12 @@ export default class Game extends React.Component {
 
     incrementScore() {
         this.setState({ score: this.state.score + 1 });
+        sessionStorage.setItem("score", this.state.score + 1);
     }
 
     incrementNumAnswered() {
         this.setState({ numAnswered: this.state.numAnswered + 1 });
+        sessionStorage.setItem("numAnswered", this.state.numAnswered + 1);
     }
 
     render() {

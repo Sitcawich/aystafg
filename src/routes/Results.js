@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 const Results = () => {
   return (
-    <h1>Results</h1>
+    <div className = 'results-container'>
+      <h1>Were You Smarter Than a Fifth Grader? Here is your final score: {sessionStorage.getItem("score")}/{sessionStorage.getItem("numAnswered")}</h1>
+      
+    </div>
+    
   )
 }
 

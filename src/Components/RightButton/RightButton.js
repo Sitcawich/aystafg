@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Next from './Next';
-import Submit from './Submit';
+import Next from '../Next/Next';
+import Submit from '../../Submit';
 
 
 export default class RightButton extends React.Component {

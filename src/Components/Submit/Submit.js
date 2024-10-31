@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 
-export default class Submit extends React.Component {
-
-    render() {
-        return (
-            <button className='navButton' to='/results'>
+export default class Submit extends React.Component{
+    
+    render(){
+        return(
+            <Link className = 'navButton' to = '/results'>
                 Submit
-            </button>
+            </Link>
         );
     }
 }

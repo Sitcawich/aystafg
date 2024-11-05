@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Next from '../Next/Next';
-import Submit from '../../Submit';
+import Submit from '../Submit/Submit';
 
 
-export default class RightButton extends React.Component {
-	render() {
-		if (this.props.questionNum !== this.props.length - 1) {
-			return (<Next onClick={this.props.onClick}
-				numAnswered={this.props.numAnswered}
-				questionNum={this.props.questionNum} />);
-		}
-		return <Submit />;
+export default function RightButton ({ questionNum, length, onClick, numAnswered }) {
+	return (
+		questionNum !== length - 1 ? (
+		  <Next onClick={onClick} numAnswered={numAnswered} questionNum={questionNum} />
+		) : (
+		  <Submit />
+		)
+	  );
 	}
-}

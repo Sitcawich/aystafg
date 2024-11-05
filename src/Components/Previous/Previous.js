@@ -1,20 +1,11 @@
 import React from 'react';
 
-export default class Previous extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-    }
+export default function Previous({ onClick }) {
+    const handleClick = () => onClick(-1);
 
-    handleClick() {
-        this.props.onClick(-1);
-    }
-
-    render() {
-        return (
-            <button className='navButton' onClick={this.handleClick}>
-                &laquo; Previous
-            </button>
-        );
-    }
+    return (
+        <button className='navButton' onClick={handleClick}>
+            &laquo; Previous
+        </button>
+    );
 }

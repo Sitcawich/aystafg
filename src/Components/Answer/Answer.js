@@ -1,5 +1,5 @@
 import React from 'react';
-import AnswerButton from '../../AnswerButton';
+import AnswerButton from '../AnswerButton/AnswerButton';
 
 export default function Answer({ questionNum, incrementScore, numAnswered, incrementNumAnswered }) {
   const answerList = [

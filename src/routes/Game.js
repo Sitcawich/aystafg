@@ -1,60 +1,60 @@
-import React from 'react';
-import Question from '../Question';
-import Answer from '../Answer';
-import Score from '../Score';
-import Previous from '../Previous';
-import RightButton from '../RightButton';
+import React, { useState, useEffect } from 'react';
+import Question from '../components/Question/Question';
+import Answer from '../components/Answer/Answer';
+import Score from '../components/Score/Score';
+import Previous from '../components/Previous/Previous';
+import RightButton from '../components/RightButton/RightButton';
 
-export default class Game extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            questionNum: 0,
-            score: 0,
-            numAnswered: 0,
-            length: 10,
-        };
-        this.changeQNum = this.changeQNum.bind(this);
-        this.incrementScore = this.incrementScore.bind(this);
-        this.incrementNumAnswered = this.incrementNumAnswered.bind(this);
-    }
-    
+const Game = () => {
+    const [questionNum, setQuestionNum] = useState(0);
+    const [score, setScore] = useState(() => {
+      const savedScore = sessionStorage.getItem('score');
+      return savedScore ? JSON.parse(savedScore) : 0;
+    });
+    const [numAnswered, setNumAnswered] = useState(0);
+    const LENGTH = 10; 
 
-    changeQNum(increment) {
-        const newQ = this.state.questionNum + increment;
-        if (newQ >= 0 && newQ < this.state.length) {
-            this.setState({ questionNum: newQ });
-        }
-    }
+    useEffect(() => {
+      sessionStorage.setItem('score', JSON.stringify(score));
+    }, [score]);
+  
+    // Functions to update state
+    const changeQNum = (increment) => {
+      const newQ = questionNum + increment;
+      if (newQ >= 0 && newQ < LENGTH) {
+        setQuestionNum(newQ);
+      }
+    };
+  
+    const incrementScore = () => {
+      setScore(score + 1);
+    };
+  
+    const incrementNumAnswered = () => {
+      setNumAnswered(numAnswered + 1);
+    };
+  
+    return (
+      <div className="panel">
+        <h3><Question questionNumber={questionNum} /></h3>
+        <Answer
+          questionNum={questionNum}
+          incrementScore={incrementScore}
+          incrementNumAnswered={incrementNumAnswered}
+          numAnswered={numAnswered}
+        />
+        <div className="nav">
+          <Previous onClick={() => changeQNum(-1)} />
+          <Score numAnswered={numAnswered} score={score} />
+          <RightButton
+            onClick={() => changeQNum(1)}
+            numAnswered={numAnswered}
+            questionNum={questionNum}
+            length={LENGTH}
+          />
+        </div>
+      </div>
+    );
+  }
 
-    incrementScore() {
-        this.setState({ score: this.state.score + 1 });
-        sessionStorage.setItem("score", this.state.score + 1);
-    }
-
-    incrementNumAnswered() {
-        this.setState({ numAnswered: this.state.numAnswered + 1 });
-        sessionStorage.setItem("numAnswered", this.state.numAnswered + 1);
-    }
-
-    render() {
-        return (
-            <div className='panel'>
-                <h3><Question questionNumber={this.state.questionNum} /></h3>
-                <Answer questionNum={this.state.questionNum}
-                    incrementScore={this.incrementScore}
-                    incrementNumAnswered={this.incrementNumAnswered}
-                    numAnswered={this.state.numAnswered} />
-                <div className='nav'>
-                    <Previous onClick={this.changeQNum} />
-                    <Score numAnswered={this.state.numAnswered}
-                        score={this.state.score} />
-                    <RightButton onClick={this.changeQNum}
-                        numAnswered={this.state.numAnswered}
-                        questionNum={this.state.questionNum}
-                        length={this.state.length} />
-                </div>
-            </div>
-        );
-    }
-}
+  export default Game;

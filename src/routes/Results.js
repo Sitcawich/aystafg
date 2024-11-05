@@ -7,7 +7,7 @@ const Results = () => {
   }
   return (
     <div className = 'results-container'>
-      <h2 className = 'results-text'>Thanks for playing! <br/> Here was your final score: {score}/{sessionStorage.getItem("numAnswered")}</h2>
+      <h2 className = 'results-text'>Thanks for playing! <br/> Here was your final score: {score}/10</h2>
     </div>
     
   )

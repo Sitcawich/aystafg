@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles.css';
+import './assets/styles/styles.css';
 import App from './App';
 import Results from './routes/Results';
 import Game from './routes/Game';

@@ -1,5 +1,4 @@
 import React from 'react';
-import hellNaw from "../assets/images/awHellNawWTF.mp4"
 
 const Results = () => {
   let score = sessionStorage.getItem("score") || 0;
@@ -7,11 +6,7 @@ const Results = () => {
     return (
       <div className = 'results-container'>
         <h2 className = 'results-text'>Thanks for playing! <br/> Here was your final score: {score}/10</h2>
-        <video width="400" height="400" controls>
-          <source src={hellNaw} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+        <iframe width="356" height="380" src="https://www.youtube.com/embed/ZVKCABOP5Rg" title="Oh my god bruh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
     )
   }
   else if (score <= 6) {

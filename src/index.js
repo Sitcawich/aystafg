@@ -4,9 +4,7 @@ import './assets/styles/styles.css';
 import App from './App';
 import Results from './routes/Results';
 import Game from './routes/Game';
-import { BrowserRouter,
-  Routes,
-  Route, Navigate, } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +17,6 @@ root.render(
         <Route path = 'game' element = {<Game/>}></Route>
         <Route path="*" element={<Navigate to="game" />} />
       </Route>
-      
     </Routes>
   </BrowserRouter>
 );

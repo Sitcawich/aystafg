@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Next({ numAnswered, questionNum, onClick }) {
+    // necessary?
     const handleClick = () => {
         if (numAnswered > questionNum) {
             onClick(1);

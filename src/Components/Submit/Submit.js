@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 
-export default function Submit() {
+export default function Submit({ handleSubmit }) {
     return(
-        <Link className = 'navButton' to = '/results'>
+        <button className = 'navButton' onClick={handleSubmit}>
             Submit
-        </Link>
+        </button>
     );
 }

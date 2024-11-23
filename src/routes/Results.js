@@ -1,7 +1,11 @@
 import React from 'react';
+import { useLocation } from "react-router-dom";
 
 const Results = () => {
-  let score = sessionStorage.getItem("score") || 0;
+  const location = useLocation();
+  const score = location.state?.score ?? 0;
+  console.log("location score", location);
+
   if (score <= 3) {
     return (
       <div className = 'results-container'>

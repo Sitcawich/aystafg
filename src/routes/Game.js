@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import Question from '../components/Question/Question';
 import Answer from '../components/Answer/Answer';
 import Score from '../components/Score/Score';
@@ -7,12 +8,10 @@ import RightButton from '../components/RightButton/RightButton';
 
 const Game = () => {
     const [questionNum, setQuestionNum] = useState(0);
-    const [score, setScore] = useState(() => {
-      const savedScore = sessionStorage.getItem('score');
-      return savedScore ? JSON.parse(savedScore) : 0;
-    });
+    const [score, setScore] = useState(0);
     const [numAnswered, setNumAnswered] = useState(0);
     const LENGTH = 10; 
+    const navigate = useNavigate();
 
     useEffect(() => {
       sessionStorage.setItem('score', JSON.stringify(score));
@@ -33,6 +32,10 @@ const Game = () => {
     const incrementNumAnswered = () => {
       setNumAnswered(numAnswered + 1);
     };
+
+    const handleSubmit = () => {
+      navigate("/results", { state: { score: score } })
+    }
   
     return (
       <div className="panel">
@@ -47,10 +50,11 @@ const Game = () => {
           <Previous onClick={() => changeQNum(-1)} />
           <Score numAnswered={numAnswered} score={score} />
           <RightButton
-            onClick={() => changeQNum(1)}
+            handleClick={() => changeQNum(1)}
             numAnswered={numAnswered}
             questionNum={questionNum}
             length={LENGTH}
+            handleSubmit={handleSubmit}
           />
         </div>
       </div>

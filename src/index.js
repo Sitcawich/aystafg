@@ -11,11 +11,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Navigate to="/game" />}></Route>
+      <Route path="/" element={<Navigate to="/game" replace />} />
       <Route path = '/' element = {<App/>}>
-        <Route path = 'results' element = {<Results/>}></Route>
-        <Route path = 'game' element = {<Game/>}></Route>
-        <Route path="*" element={<Navigate to="game" />} />
+        <Route path = 'results' element = {<Results/>} />
+        <Route path = 'game' element = {<Game/>} />
+        <Route path="*" element={<Navigate to="game" replace />} />
       </Route>
     </Routes>
   </BrowserRouter>

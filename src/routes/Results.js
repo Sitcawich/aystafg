@@ -1,40 +1,60 @@
 import React from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const Results = () => {
   const location = useLocation();
   const score = location.state?.score ?? 0;
-  console.log("location score", location);
+
+  // Determine iframe properties based on the score
+  let iframeDetails = {
+    width: "800",
+    height: "400",
+    src: "https://www.youtube.com/embed/DmH6YPWhaDY", // Default video
+    title: "Galaxy Brain meme"
+  };
 
   if (score <= 3) {
-    return (
-      <div className = 'results-container'>
-        <h2 className = 'results-text'>Thanks for playing! <br/> Here was your final score: {score}/10</h2>
-        <iframe width="356" height="380" src="https://www.youtube.com/embed/ZVKCABOP5Rg" title="Oh my god bruh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
-    )
+    iframeDetails = {
+      width: "356",
+      height: "380",
+      src: "https://www.youtube.com/embed/ZVKCABOP5Rg",
+      title: "Oh my god bruh"
+    };
+  } else if (score <= 6) {
+    iframeDetails = {
+      width: "300",
+      height: "400",
+      src: "https://www.youtube.com/embed/d8oA10w4h0A",
+      title: "you shoulda payed attention in class you f$&amp;@ing bozo"
+    };
+  } else if (score <= 8) {
+    iframeDetails = {
+      width: "800",
+      height: "400",
+      src: "https://www.youtube.com/embed/_oGrE2vL61g",
+      title: "Not Bad Not Bad Now You Meme Template"
+    };
   }
-  else if (score <= 6) {
-    return (
-      <div className = 'results-container'>
-        <h2 className = 'results-text'>Thanks for playing! <br/> Here was your final score: {score}/10</h2>
-        <iframe width="300" height="400" src="https://www.youtube.com/embed/d8oA10w4h0A" title="you shoulda payed attention in class you f$&amp;@ing bozo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
-        </div>
-    )  
-  }
-  else if (score <= 8) {
-    return (
-      <div className = 'results-container'>
-        <h2 className = 'results-text'>Thanks for playing! <br/> Here was your final score: {score}/10</h2>
-        <iframe width="800" height="400" src="https://www.youtube.com/embed/_oGrE2vL61g" title="Not Bad Not Bad Now You Meme Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      )  
-  }
-  return (
-    <div className = 'results-container'>
-      <h2 className = 'results-text'>Thanks for playing! <br/> Here was your final score: {score}/10</h2>
-      <iframe width="800" height="400" src="https://www.youtube.com/embed/DmH6YPWhaDY" title="Galaxy Brain meme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
-    </div>
-  )
-}
 
-export default Results
+  return (
+    <div className="results-container">
+      <h2 className="results-text">
+        Thanks for playing! <br /> Here was your final score: {score}/10
+      </h2>
+      <Link to="/game" className="play-again-button">
+        Play Again?
+      </Link>
+      <iframe
+        width={iframeDetails.width}
+        height={iframeDetails.height}
+        src={iframeDetails.src}
+        title={iframeDetails.title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+};
+
+export default Results;

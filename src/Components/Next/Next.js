@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default function Next({ numAnswered, questionNum, onClick }) {
-    // necessary?
     const handleClick = () => {
+        // have to answer question before seeing next question
         if (numAnswered > questionNum) {
-            onClick(1);
+            onClick();
         }
     }
 
